@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>About</title>
+    </head>
+    <body>
+        <script>
+
+            var tablinks = document.getElementsByClassName('tab-links');
+            var tabcontents = document.getElementsByClassName('tab-contents');
+            
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove('active-link');
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove('active-tab');
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tabname).classList.add('active-tab');
+            }
+        </script>
+        <nav class="navBar">
+            <img src="images/logo7.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/userV3.jpeg" id="user">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Meesouk was born in Mantthana village.
+                            His mother was Meechok. His father was the cat next door.
+                            His favorite thing is wet food and his least favorite thing is taking
+                            a shower.</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Eating</span><br>Can each a bunch of food in a small amount of time</li>
+                                    <li><span>Pooping</span><br>Can poop accurately in a litter box</li>
+                                    <li><span>Hunting</span><br>Actually manages to catch a cockroach or a small lizard from time to time</li>
+                                </ul>
+                            </div>      
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2014 - 2015</span><br>kitten stage: screams loudly and run alot</li>
+                                    <li><span>2015 - 2018</span><br>young adult stage: fittest stage in all of the stages</li>
+                                    <li><span>2018 - present</span><br>gas tank stage: moves slowly eat loudly</li>
+                                </ul>
+                            </div>      
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2014</span><br>Kitten High</li>
+                                    <li><span>2015</span><br>Cattasat University, glass breaking faculty</li>
+                                    <li><span>2018</span><br>Catford University, MBA (mouse bitter apprentice)</li>
+                                </ul>
+                            </div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
